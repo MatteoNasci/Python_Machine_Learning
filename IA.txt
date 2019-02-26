@@ -15,4 +15,5 @@ Gradienti: vettore(insieme) di derivate, usato quando si ha piu di un solo w par
 Delta rule derivation
 Back propagation (estensione del delta rule derivation).
 Validazione: dimostrare che un modello non funzioni solamente per gli esempi usando dataset non usato per il training
-Over fitting(training ok, test male), under fitting(training male)
+Over fitting(training ok, test male), under fitting(training male).
+One hot encoding per convertire categoria con n elementi in n features con valori 0 (spento) e 1(acceso)

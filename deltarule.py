@@ -1,7 +1,8 @@
 from sklearn.datasets import load_boston
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error , r2_score
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
 
 
 class MyTrumpiniLinearRegression:
@@ -38,9 +39,22 @@ if __name__ == "__main__":
     scaler = MinMaxScaler()
     X = scaler.fit_transform(X)
 
-    model = MyTrumpiniLinearRegression(max_iter=50_000,learning_rate=0.001)
-    model.fit(X, y)
-    predicted = model.predict(X)
-    mae = mean_absolute_error(y, predicted)
-    print("Mean absolute error: ")
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+    model = MyTrumpiniLinearRegression(max_iter=1_000, learning_rate=0.001)
+    model.fit(X_train, y_train)
+    
+    predicted = model.predict(X_train)
+    mae = mean_absolute_error(y_train, predicted)
+    r2 = r2_score(y_train, predicted)
+    print("Train Mean absolute error: ")
     print(mae)
+    print("Test r2 error: ")
+    print(r2)
+    predicted = model.predict(X_test)
+    mae = mean_absolute_error(y_test, predicted)
+    r2 = r2_score(y_test, predicted)
+    print("Test Mean absolute error: ")
+    print(mae)
+    print("Test r2 error: ")
+    print(r2)
