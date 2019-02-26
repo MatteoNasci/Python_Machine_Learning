@@ -1,5 +1,5 @@
 Ai,
-Machine learning (richiede data set), ia bio-ispirata, deep learning (intersezione fra ML e ia BI.
+Machine learning (richiede data set), ia bio-ispirata, deep learning (intersezione fra ML e ia BI).
 Apprendimento a rinforzo.
 Features (inputs) e target (outputs).
 Spazio degli input, spazio dei parametri.
@@ -13,4 +13,6 @@ migliore è il modello rappresentato da quei parametri w per rappresentare gli e
 La derivata può essere usata per trovare l'errore minimo locale / globale nello spazio dei parametri.
 Gradienti: vettore(insieme) di derivate, usato quando si ha piu di un solo w parametro (ogni w avrà una derivata).
 Delta rule derivation
-Back propagation (estensione del delta rule derivation)
+Back propagation (estensione del delta rule derivation).
+Validazione: dimostrare che un modello non funzioni solamente per gli esempi usando dataset non usato per il training
+Over fitting(training ok, test male), under fitting(training male)
