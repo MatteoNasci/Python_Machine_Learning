@@ -1,0 +1,16 @@
+Ai,
+Machine learning (richiede data set), ia bio-ispirata, deep learning (intersezione fra ML e ia BI.
+Apprendimento a rinforzo.
+Features (inputs) e target (outputs).
+Spazio degli input, spazio dei parametri.
+Gli esempi(puntini sullo spazio degli input) creati dalle features e dai target
+Modello � una funzione che a partire dalle features ritorna i target
+Algoritmo di addestramento ha come input i dati e output il modello
+Nella notazione del ML: y = target, x = feature, w = valore trovato dal ML
+Spazio dei parametri: Grafo che usa come X le w (parametri calcolati nel ML) e come Y gli errori.
+Ogni punto nello spazio dei parametri è un modello nello spazio degli input. Minore è l'errore di un punto nello spazio dei parametri 
+migliore è il modello rappresentato da quei parametri w per rappresentare gli esempi dello spazio degli input.
+La derivata può essere usata per trovare l'errore minimo locale / globale nello spazio dei parametri.
+Gradienti: vettore(insieme) di derivate, usato quando si ha piu di un solo w parametro (ogni w avrà una derivata).
+Delta rule derivation
+Back propagation (estensione del delta rule derivation)
