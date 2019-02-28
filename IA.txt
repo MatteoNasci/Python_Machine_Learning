@@ -16,4 +16,8 @@ Delta rule derivation
 Back propagation (estensione del delta rule derivation).
 Validazione: dimostrare che un modello non funzioni solamente per gli esempi usando dataset non usato per il training
 Over fitting(training ok, test male), under fitting(training male).
-One hot encoding per convertire categoria con n elementi in n features con valori 0 (spento) e 1(acceso)
+One hot encoding per convertire categoria con n elementi in n features con valori 0 (spento) e 1(acceso). Possibile
+stesso ragionamento con testo, con valore = al numero di apparizioni della parola o cose simili. Tecnica "Bag of words".
+Transfer learning.
+Per classificatori si può usare una Sigmoide per modello
+joblip
