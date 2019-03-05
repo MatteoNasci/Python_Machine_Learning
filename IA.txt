@@ -19,5 +19,21 @@ Over fitting(training ok, test male), under fitting(training male).
 One hot encoding per convertire categoria con n elementi in n features con valori 0 (spento) e 1(acceso). Possibile
 stesso ragionamento con testo, con valore = al numero di apparizioni della parola o cose simili. Tecnica "Bag of words".
 Transfer learning.
-Per classificatori si può usare una Sigmoide per modello
+Per classificatori si può usare una Sigmoide o altre curve per modello
 joblip
+
+Apprendimento con rinforzo, i dati se li crea 'muovendosi' nell'ambiente. Premiare comportamenti buoni e 
+penalizzare comportamenti non voluti.
+Agente ('A') si muove nell'Ambiente ('E'). Dopo un azione ('a') dell'agente torna indietro 'S' (stato dell'ambiente dopo l'azione) e 'r' (rinforzo)
+Obiettivo: massimizzare 'R'. 'R' = sommatoria di tutti gli 'r' nel tempo moltiplicati per gamma elevato al tempo 't' (in modo da ridurre 
+il peso dei rinforzi piu lontani nel tempo e assicurarsi che il risultato della sommatoria sia un numero finito).
+R = r + sommatoria da t = 1 a t = infinito di Gamma^t * r di t; La prima r è il rinforzo attuale, la sommatoria è il rinforzo futuro
+r iniziale è il rinforzo osservato al momento, la sommatoria è una predizione.
+R = r + MaxA(Q(s + a)). Q è un modello che prende come input lo stato attuale dell'ambiente e l'azione e ritorna la stima per il futuro. 
+Di questa stima noi prendiamo quella migliore a seconda delle azioni possibili.
+Q table ha valori per ogni stato per ogni azione che indicano la stima del rinforzo futuro
+Policy: dato lo stato dell'ambiente (S) e la Q table ritorna l'azione migliore
+Q(s,a)(questa è la predizione) = r + MaxAprimo(Q(sprimo,aprimo)) (questo è il target con r che è il rinforzo osservato ed il resto che è unas tima del futuro). 
+Error = predizione - target
+Le feature sono tutti gli stati dell'ambiente, i target sono n modelli con n che è il numero di azioni uniche
+Finale: Q(s,a) = r + gamma*max(Q(sprimo,aprimo))
