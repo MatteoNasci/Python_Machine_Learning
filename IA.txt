@@ -37,3 +37,6 @@ Q(s,a)(questa è la predizione) = r + MaxAprimo(Q(sprimo,aprimo)) (questo è il 
 Error = predizione - target
 Le feature sono tutti gli stati dell'ambiente, i target sono n modelli con n che è il numero di azioni uniche
 Finale: Q(s,a) = r + gamma*max(Q(sprimo,aprimo))
+
+MLPRegressor from sklearn.neural_network
+MLPRefressor([10]) , 10 neuroni
